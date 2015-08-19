@@ -1,6 +1,7 @@
 [![Build Status](https://secure.travis-ci.org/pmvc/generator-php-pmvc-plugin.png?branch=master)](https://travis-ci.org/pmvc/generator-php-pmvc-plugin)
 
 ## generator-php-pmvc-plugin getting Started
+   * npm https://www.npmjs.com/package/generator-php-pmvc-plugin
 
 ### What is Yeoman?
 
