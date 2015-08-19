@@ -1,8 +1,5 @@
 # generator-php-pmvc-plugin [![Build Status](https://secure.travis-ci.org/pmvc/generator-php-pmvc-plugin.png?branch=master)](https://travis-ci.org/pmvc/generator-php-pmvc-plugin)
 
-> [Yeoman](http://yeoman.io) generator
-
-
 ## Getting Started
 
 ### What is Yeoman?
