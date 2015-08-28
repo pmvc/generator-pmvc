@@ -11,13 +11,13 @@ module.exports = yeoman.generators.Base.extend({
     this.log(yosay(
       'Install PMVC Plugin generator,\n "Create Folder First" \nYou need create folder first by yourself.'
     ));
-
+    var folders = this.destinationRoot().split('/');
     var prompts = [
     {
       type: 'input',
       name: 'plugInName',
       message: 'Please input your plug-in name?',
-      default: 'my_plug' 
+      default: folders[folders.length-1] 
     },
     {
       type: 'input',
