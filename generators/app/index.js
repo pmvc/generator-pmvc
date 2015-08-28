@@ -9,7 +9,7 @@ module.exports = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Install PMVC Plugin generator!'
+      'Install PMVC Plugin generator,\n "Create Folder First" \nYou need create folder first by yourself.'
     ));
 
     var prompts = [
