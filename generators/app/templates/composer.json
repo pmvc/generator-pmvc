@@ -2,6 +2,7 @@
     "name": "pmvc-plugin/<%= plugInName %>",
     "description": "<%= description %>",
     "type": "library",
+    "homepage": "https://github.com/pmvc/pmvc",
     "keywords": ["<%= keyword %>", "pmvc", "plug-in"],
     "license": "MIT",
     "authors": [
