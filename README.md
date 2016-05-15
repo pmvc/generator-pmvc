@@ -22,7 +22,7 @@ Yeoman travels light. He didn't pack any generators when he moved in. You can th
 To install generator-php-pmvc-plugin from npm, run:
 
 ```bash
-npm install -g generator-php-pmvc-plugin
+sudo npm install -g generator-php-pmvc-plugin
 ```
 
 Finally, initiate the generator:
