@@ -1,9 +1,7 @@
 <?php
 namespace PMVC\PlugIn\<%= plugInName %>;
-use PHPUnit_Framework_TestCase;
 
-\PMVC\Load::plug();
-\PMVC\addPlugInFolders(['../']);
+use PHPUnit_Framework_TestCase;
 
 class <%= PlugInName %>Test extends PHPUnit_Framework_TestCase
 {

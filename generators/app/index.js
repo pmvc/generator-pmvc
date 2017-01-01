@@ -2,6 +2,7 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
+var mkdirp = require('mkdirp');
 
 module.exports = yeoman.generators.Base.extend({
   prompting: function () {
@@ -81,9 +82,14 @@ module.exports = yeoman.generators.Base.extend({
             plugInName: this.plugInName
         }
       );
+      mkdirp(this.destinationPath('tests'));
+      this.fs.copy(
+        this.templatePath('tests/include.php'),
+        this.destinationPath('tests/include.php')
+      );
       this.fs.copyTpl(
-        this.templatePath('test.php'),
-        this.destinationPath('test.php'),
+        this.templatePath('tests/test.php'),
+        this.destinationPath('tests/test.php'),
         {
             plugInName: this.plugInName,
             PlugInName: this.plugInName.charAt(0).toUpperCase() + this.plugInName.slice(1)
