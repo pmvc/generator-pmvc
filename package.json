@@ -1,6 +1,6 @@
 {
   "name": "generator-php-pmvc-plugin",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Yeoman generator for PMVC Plugin",
   "license": "MIT",
   "main": "",
