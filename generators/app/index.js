@@ -10,7 +10,7 @@ module.exports = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Install PMVC Plugin generator,\n "Create Folder First" \nYou need create folder first by yourself.'
+      'Before start "PMVC Plugin" generator,\n "Need Create Folder First" \nYou need create folder first by yourself.'
     ));
     var folders = this.destinationRoot().split('/');
     var prompts = [
@@ -83,6 +83,7 @@ module.exports = yeoman.generators.Base.extend({
         }
       );
       mkdirp(this.destinationPath('tests'));
+      mkdirp(this.destinationPath('src'));
       this.fs.copy(
         this.templatePath('tests/include.php'),
         this.destinationPath('tests/include.php')
