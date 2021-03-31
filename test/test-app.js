@@ -1,17 +1,21 @@
-'use strict';
+/**
+ * https://yeoman.io/authoring/testing.html
+ */
+var path = require("path");
+var helpers = require("yeoman-test");
+var assert = require("yeoman-assert");
+var os = require("os");
 
-var path = require('path');
-var helpers = require('yeoman-test');
-var os = require('os');
-
-describe('php-pmvc-plugin:app', function () {
+describe("php-pmvc-plugin:app", function () {
   before(function (done) {
-    helpers.run(path.join(__dirname, '../generators/app'))
+    helpers
+      .run(path.join(__dirname, "../generators/app"))
       .withOptions({ skipInstall: true })
       .withPrompts({ someOption: true })
-      .on('end', done);
+      .on("end", done);
   });
 
-  it('creates files', function () {
+  it("creates files", function () {
+    assert.noFile();
   });
 });
