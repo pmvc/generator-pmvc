@@ -36,4 +36,4 @@ yo php-pmvc-plugin
 
 ## License
 
-MIT
+MIT @2021
