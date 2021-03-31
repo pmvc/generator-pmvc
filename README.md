@@ -1,5 +1,8 @@
 [![Build Status](https://secure.travis-ci.org/pmvc/generator-php-pmvc-plugin.png?branch=master)](https://travis-ci.org/pmvc/generator-php-pmvc-plugin)
 
+## Required node12
+https://formulae.brew.sh/formula/node@12
+
 ## generator-php-pmvc-plugin getting Started
    * npm https://www.npmjs.com/package/generator-php-pmvc-plugin
 
