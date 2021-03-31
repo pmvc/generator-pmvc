@@ -1,8 +1,7 @@
 'use strict';
 
 var path = require('path');
-var assert = require('yeoman-generator').assert;
-var helpers = require('yeoman-generator').test;
+var helpers = require('yeoman-test');
 var os = require('os');
 
 describe('php-pmvc-plugin:app', function () {
@@ -14,7 +13,5 @@ describe('php-pmvc-plugin:app', function () {
   });
 
   it('creates files', function () {
-    assert.file([
-    ]);
   });
 });
