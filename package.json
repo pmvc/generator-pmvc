@@ -1,6 +1,6 @@
 {
   "name": "generator-php-pmvc-plugin",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Yeoman generator for PMVC Plugin",
   "license": "MIT",
   "main": "",
@@ -12,9 +12,6 @@
   "scripts": {
     "test": "mocha"
   },
-  "files": [
-    "generators"
-  ],
   "keywords": [
     "yeoman-generator"
   ],
@@ -25,14 +22,20 @@
     "yosay": "^1.0.2"
   },
   "devDependencies": {
-    "yeoman-test": "*",
+    "mocha": "^8.3.2",
     "yeoman-assert": "*",
-    "mocha": "^8.3.2"
+    "yeoman-test": "*"
   },
   "bugs": {
     "url": "https://github.com/pmvc/generator-php-pmvc-plugin/issues"
   },
   "homepage": "https://github.com/pmvc/generator-php-pmvc-plugin",
+  "engines": {
+    "node": ">=12"
+  },
+  "files": [
+    "generators"
+  ],
   "directories": {
     "test": "test"
   }
