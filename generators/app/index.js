@@ -5,14 +5,41 @@ var yosay = require("yosay");
 var mkdirp = require("mkdirp");
 
 module.exports = class extends Generator {
+  // note: arguments and options should be defined in the constructor.
+  constructor(args, opts) {
+    super(args, opts);
+
+    // This makes `appname` a required argument.
+    // this.argument("appname", { type: String, required: true });
+
+    // And you can then access it later; e.g.
+    // this.log(this.options.appname);
+  }
+
+  /**
+   * Run loop (Life cycle)
+   * https://yeoman.io/authoring/running-context.html#the-run-loop
+   *
+   * 1. initializing
+   * 2. prompting
+   * 3. configuring
+   * 4. default
+   * 5. writing
+   * 6. conflicts
+   * 7. install
+   * 8. end
+   */
+
+
   async prompting() {
+    // https://github.com/yeoman/environment/blob/main/lib/util/log.js
     this.log(
       yosay(
         'Before start "PMVC Plugin" generator,\n "Need Create Folder First" \nYou need create folder first by yourself.'
       )
     );
 
-    var folders = this.destinationRoot().split("/");
+    const folders = this.destinationRoot().split("/");
 
     const answers = await this.prompt([
       {
