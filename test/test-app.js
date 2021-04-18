@@ -11,7 +11,7 @@ describe("php-pmvc-plugin:app", function () {
     helpers
       .run(path.join(__dirname, "../generators/app"))
       .withOptions({ skipInstall: true })
-      .withPrompts({ someOption: true })
+      .withPrompts({ isReady: true })
       .on("end", done);
   });
 
