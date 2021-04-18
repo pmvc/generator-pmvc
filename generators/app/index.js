@@ -80,7 +80,7 @@ module.exports = class extends Generator {
     this.props = answers;
     this.plugInName = answers.plugInName;
     this.description = answers.description;
-    this.keyword = answers.keyword;
+    this.keyword = answers.keyword || answers.plugInName;
   }
   writing() {
     this.fs.copy(
