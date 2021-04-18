@@ -30,13 +30,12 @@ module.exports = class extends Generator {
    * 8. end
    */
 
-
   async prompting() {
     // https://github.com/yeoman/environment/blob/main/lib/util/log.js
     this.log(
       yosay(
         'Before "PMVC Plugin"\n\n!! Need Create Folder First !!\n\nYou need create folder by yourself.',
-        {maxLength: 30}
+        { maxLength: 30 }
       )
     );
 
@@ -47,7 +46,7 @@ module.exports = class extends Generator {
       {
         type: "confirm",
         name: "isReady",
-        message: `We will put files @ ${folderName}, do you already create plug-in folder?`,
+        message: `We will put files at [${folderName}], do you already create plug-in folder?`,
         default: false,
       },
       {
@@ -56,6 +55,8 @@ module.exports = class extends Generator {
             process.exit(0);
           }
         },
+      },
+      {
         type: "input",
         name: "plugInName",
         message: "Please input your plug-in name?",
