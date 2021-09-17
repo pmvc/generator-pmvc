@@ -23,7 +23,7 @@
     "yosay": "^1.0.2"
   },
   "devDependencies": {
-    "mocha": "^8.x",
+    "reshow-unit": "*",
     "yeoman-assert": "*",
     "yeoman-test": "*"
   },
