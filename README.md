@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/pmvc/generator-php-pmvc-plugin.png?branch=master)](https://travis-ci.org/pmvc/generator-php-pmvc-plugin)
+[![CircleCI](https://circleci.com/gh/pmvc/generator-php-pmvc-plugin/tree/master.svg?style=svg)](https://circleci.com/gh/pmvc/generator-php-pmvc-plugin/tree/master)
 
 ## Required node12
 https://formulae.brew.sh/formula/node@12
