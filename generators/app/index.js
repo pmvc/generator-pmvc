@@ -1,8 +1,8 @@
-var yeoman = require("yeoman-generator");
-var Generator = require("yeoman-generator");
-var chalk = require("chalk");
-var yosay = require("yosay");
-var mkdirp = require("mkdirp");
+const yeoman = require("yeoman-generator");
+const Generator = require("yeoman-generator");
+const chalk = require("chalk");
+const yosay = require("yosay");
+const mkdirp = require("mkdirp");
 
 module.exports = class extends Generator {
   // note: arguments and options should be defined in the constructor.
@@ -83,18 +83,23 @@ module.exports = class extends Generator {
     this.keyword = answers.keyword || answers.plugInName;
   }
   writing() {
-    this.fs.copy(
-      this.templatePath("phpunit.xml"),
-      this.destinationPath("phpunit.xml")
-    );
-    this.fs.copy(
-      this.templatePath("_gitignore"),
-      this.destinationPath(".gitignore")
-    );
-    this.fs.copy(
-      this.templatePath("_travis.yml"),
-      this.destinationPath(".travis.yml")
-    );
+    const copy = (src, dest) => {
+      try {
+        this.fs.copy(this.templatePath(src), this.destinationPath(dest));
+      } catch (e) {
+        console.log(e);
+      }
+    };
+
+    mkdirp(this.destinationPath("tests"));
+    mkdirp(this.destinationPath("src"));
+    mkdirp(this.destinationPath(".circleci"));
+
+    copy("phpunit.xml", "phpunit.xml");
+    copy("_gitignore", ".gitignore");
+    copy("tests/include.php", "tests/include.php");
+    copy("_circleci/config.yml", ".circleci/config.yml");
+
     this.fs.copyTpl(
       this.templatePath("composer.json"),
       this.destinationPath("composer.json"),
@@ -104,6 +109,7 @@ module.exports = class extends Generator {
         keyword: this.keyword,
       }
     );
+
     this.fs.copyTpl(
       this.templatePath("hello_world.php"),
       this.destinationPath(this.plugInName + ".php"),
@@ -112,6 +118,7 @@ module.exports = class extends Generator {
         _INIT_CONFIG: "${_INIT_CONFIG}",
       }
     );
+
     this.fs.copyTpl(
       this.templatePath("README.md"),
       this.destinationPath("README.md"),
@@ -119,12 +126,7 @@ module.exports = class extends Generator {
         plugInName: this.plugInName,
       }
     );
-    mkdirp(this.destinationPath("tests"));
-    mkdirp(this.destinationPath("src"));
-    this.fs.copy(
-      this.templatePath("tests/include.php"),
-      this.destinationPath("tests/include.php")
-    );
+
     this.fs.copyTpl(
       this.templatePath("tests/test.php"),
       this.destinationPath("tests/test.php"),

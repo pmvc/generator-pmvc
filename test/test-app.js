@@ -1,21 +1,38 @@
 /**
  * https://yeoman.io/authoring/testing.html
+ * https://gilsondev.gitbooks.io/yeoman-authoring/content/authoring/unit_testing.html
  */
-var path = require("path");
-var helpers = require("yeoman-test");
-var assert = require("yeoman-assert");
-var os = require("os");
+const path = require("path");
+const helpers = require("yeoman-test");
+const assert = require("yeoman-assert");
+const os = require("os");
+const fs = require("fs");
 
 describe("php-pmvc-plugin:app", function () {
-  before(function (done) {
+  before((done) => {
     helpers
       .run(path.join(__dirname, "../generators/app"))
-      .withOptions({ skipInstall: true })
-      .withPrompts({ isReady: true })
-      .on("end", done);
+      .inTmpDir(dir=>{console.log('Test folder: '+ dir)})
+      .withPrompts({
+        isReady: true,
+        plugInName: "a",
+        description: "b",
+        keyword: "c",
+      })
+      .on("end", () => {
+        done();
+      });
   });
 
-  it("creates files", function () {
-    assert.noFile();
+  it("should have folder", () => {
+    assert.file(['tests', 'src', '.circleci']);
+  });
+
+  it("should have file", () => {
+    assert.file(['phpunit.xml', '.gitignore', 'tests/include.php', '.circleci/config.yml']);
+  });
+
+  it("should have tpl", () => {
+    assert.file(['composer.json', 'a.php', 'README.md', 'tests/test.php']);
   });
 });
