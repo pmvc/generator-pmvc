@@ -83,9 +83,15 @@ module.exports = class extends Generator {
     this.keyword = answers.keyword || answers.plugInName;
   }
   writing() {
-    const copy = (src, dest) => {
+    const copy = (src, dest, options) => {
+      const action = options ? this.fs.copyTpl : this.fs.copy;
       try {
-        this.fs.copy(this.templatePath(src), this.destinationPath(dest));
+        action.call(
+          this.fs,
+          this.templatePath(src),
+          this.destinationPath(dest),
+          options
+        );
       } catch (e) {
         console.log(e);
       }
@@ -100,41 +106,25 @@ module.exports = class extends Generator {
     copy("tests/include.php", "tests/include.php");
     copy("_circleci/config.yml", ".circleci/config.yml");
 
-    this.fs.copyTpl(
-      this.templatePath("composer.json"),
-      this.destinationPath("composer.json"),
-      {
-        plugInName: this.plugInName,
-        description: this.description,
-        keyword: this.keyword,
-      }
-    );
+    copy("composer.json", "composer.json", {
+      plugInName: this.plugInName,
+      description: this.description,
+      keyword: this.keyword,
+    });
 
-    this.fs.copyTpl(
-      this.templatePath("hello_world.php"),
-      this.destinationPath(this.plugInName + ".php"),
-      {
-        plugInName: this.plugInName,
-        _INIT_CONFIG: "${_INIT_CONFIG}",
-      }
-    );
+    copy("hello_world.php", this.plugInName + ".php", {
+      plugInName: this.plugInName,
+      _INIT_CONFIG: "${_INIT_CONFIG}",
+    });
 
-    this.fs.copyTpl(
-      this.templatePath("README.md"),
-      this.destinationPath("README.md"),
-      {
-        plugInName: this.plugInName,
-      }
-    );
+    copy("README.md", "README.md", {
+      plugInName: this.plugInName,
+    });
 
-    this.fs.copyTpl(
-      this.templatePath("tests/test.php"),
-      this.destinationPath("tests/test.php"),
-      {
-        plugInName: this.plugInName,
-        PlugInName:
-          this.plugInName.charAt(0).toUpperCase() + this.plugInName.slice(1),
-      }
-    );
+    copy("tests/test.php", "tests/test.php", {
+      plugInName: this.plugInName,
+      PlugInName:
+        this.plugInName.charAt(0).toUpperCase() + this.plugInName.slice(1),
+    });
   }
 };
