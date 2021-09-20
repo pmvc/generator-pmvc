@@ -11,7 +11,7 @@ const fs = require("fs");
 describe("php-pmvc-plugin:app", () => {
   before((done) => {
     helpers
-      .run(path.join(__dirname, "../app"))
+      .run(path.join(__dirname, "../."))
       .inTmpDir(dir=>{console.log('Test folder: '+ dir)})
       .withPrompts({
         isReady: true,
