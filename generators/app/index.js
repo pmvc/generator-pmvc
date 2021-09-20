@@ -34,6 +34,7 @@ module.exports = class extends Generator {
    * Using lists in a yeoman prompt
    *
    * https://www.alwaystwisted.com/post.php?s=using-lists-in-a-yeoman-generator
+   * https://github.com/SBoudrias/Inquirer.js
    */
   async prompting() {
     // https://github.com/yeoman/environment/blob/main/lib/util/log.js
@@ -87,6 +88,7 @@ module.exports = class extends Generator {
     this.description = answers.description;
     this.keyword = answers.keyword || answers.plugInName;
   }
+
   writing() {
     const copy = (src, dest, options) => {
       const action = options ? this.fs.copyTpl : this.fs.copy;
@@ -132,4 +134,5 @@ module.exports = class extends Generator {
         this.plugInName.charAt(0).toUpperCase() + this.plugInName.slice(1),
     });
   }
+
 };
