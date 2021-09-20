@@ -46,8 +46,7 @@ module.exports = class extends Generator {
 
     const folders = this.destinationRoot().split("/");
     const folderName = folders[folders.length - 1];
-
-    const answers = await this.prompt([
+    const prompts = [
       {
         type: "confirm",
         name: "isReady",
@@ -81,7 +80,8 @@ module.exports = class extends Generator {
           "Please input keyword for plug-in? (will use in php composer tagging)",
         default: "",
       },
-    ]);
+    ];
+    const answers = await this.prompt(prompts);
     this.props = answers;
     this.plugInName = answers.plugInName;
     this.description = answers.description;
