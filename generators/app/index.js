@@ -30,6 +30,11 @@ module.exports = class extends Generator {
    * 8. end
    */
 
+  /**
+   * Using lists in a yeoman prompt
+   *
+   * https://www.alwaystwisted.com/post.php?s=using-lists-in-a-yeoman-generator
+   */
   async prompting() {
     // https://github.com/yeoman/environment/blob/main/lib/util/log.js
     this.log(
