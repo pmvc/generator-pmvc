@@ -10,7 +10,9 @@
   },
   "author": " (https://github.com/pmvc)",
   "scripts": {
-    "test": "mocha",
+    "mochaFor": "mocha",
+    "mocha": "npm run mochaFor -- 'generators/**/__tests__/*.js'",
+    "test": "npm run mocha",
     "prepublishOnly": "npm run test"
   },
   "keywords": [
