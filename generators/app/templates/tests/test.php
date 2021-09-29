@@ -1,9 +1,9 @@
 <?php
 namespace PMVC\PlugIn\<%= plugInName %>;
 
-use PMVC_TestCase;
+use PMVC\TestCase;
 
-class <%= PlugInName %>Test extends PMVC_TestCase
+class <%= PlugInName %>Test extends TestCase
 {
     private $_plug = '<%= plugInName %>';
     function testPlugin()
