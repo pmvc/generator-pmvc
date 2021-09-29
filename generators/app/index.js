@@ -111,7 +111,10 @@ module.exports = class extends Generator {
     copy("phpunit.xml", "phpunit.xml");
     copy("_gitignore", ".gitignore");
     copy("tests/include.php", "tests/include.php");
-    copy("_circleci/config.yml", ".circleci/config.yml");
+
+    copy("_circleci/config.yml", ".circleci/config.yml", {
+      plugInName: this.plugInName,
+    });
 
     copy("composer.json", "composer.json", {
       plugInName: this.plugInName,

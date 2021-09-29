@@ -29,14 +29,15 @@ describe("php-pmvc-plugin:app", () => {
   });
 
   it("should have file", () => {
-    assert.file(['phpunit.xml', '.gitignore', 'tests/include.php', '.circleci/config.yml']);
+    assert.file(['phpunit.xml', '.gitignore', 'tests/include.php']);
   });
 
   it("should have tpl", () => {
-    assert.file(['composer.json', 'foo.php', 'README.md', 'tests/test.php']);
+    assert.file(['composer.json', 'foo.php', 'README.md', 'tests/test.php', '.circleci/config.yml']);
   });
 
   it("should have content", () => {
     assert.fileContent('composer.json', 'foo-desc');
+    assert.fileContent('.circleci/config.yml', 'foo');
   });
 });
