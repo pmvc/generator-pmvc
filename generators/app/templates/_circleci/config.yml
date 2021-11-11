@@ -46,6 +46,5 @@ workflows:
     jobs:
       - unittest:
           matrix:
-            name: test-<< matrix.php-version >>
             parameters:
               php-version: ["8", "7.4", "5.6"]
