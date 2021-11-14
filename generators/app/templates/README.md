@@ -1,6 +1,6 @@
 [![Latest Stable Version](https://poser.pugx.org/pmvc-plugin/<%= plugInName %>/v/stable)](https://packagist.org/packages/pmvc-plugin/<%= plugInName %>) 
 [![Latest Unstable Version](https://poser.pugx.org/pmvc-plugin/<%= plugInName %>/v/unstable)](https://packagist.org/packages/pmvc-plugin/<%= plugInName %>) 
-[![CircleCI](https://circleci.com/gh/pmvc-plugin/<%= plugInName %>/tree/master.svg?style=svg)](https://circleci.com/gh/pmvc-plugin/<%= plugInName %>/tree/master)
+[![CircleCI](https://circleci.com/gh/pmvc-plugin/<%= plugInName %>/tree/main.svg?style=svg)](https://circleci.com/gh/pmvc-plugin/<%= plugInName %>/tree/main)
 [![License](https://poser.pugx.org/pmvc-plugin/<%= plugInName %>/license)](https://packagist.org/packages/pmvc-plugin/<%= plugInName %>)
 [![Total Downloads](https://poser.pugx.org/pmvc-plugin/<%= plugInName %>/downloads)](https://packagist.org/packages/pmvc-plugin/<%= plugInName %>) 
 
@@ -18,7 +18,7 @@
 ```
 {
     "require": {
-        "pmvc-plugin/<%= plugInName %>": "dev-master"
+        "pmvc-plugin/<%= plugInName %>": "dev-main"
     }
 }
 ```
