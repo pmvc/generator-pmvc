@@ -1,19 +1,21 @@
 {
-    "name": "pmvc-plugin/<%= plugInName %>",
-    "description": "<%= description %>",
-    "type": "library",
-    "homepage": "https://github.com/pmvc/pmvc",
-    "keywords": ["<%= keyword %>", "pmvc", "plug-in"],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Hill",
-            "email": "hill@kimo.com"
-        }
-    ],
-    "require": {
-        "pmvc/pmvc": "*",
-        "pmvc-plugin/unit": "*"
-    },
-    "minimum-stability": "dev"
+  "name": "pmvc-plugin/<%= plugInName %>",
+  "description": "<%= description %>",
+  "type": "library",
+  "homepage": "https://github.com/pmvc/pmvc",
+  "keywords": ["<%= keyword %>", "pmvc", "plug-in"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Hill",
+      "email": "hill@kimo.com"
+    }
+  ],
+  "require": {
+    "pmvc/pmvc": "*"
+  },
+  "require-dev": {
+    "pmvc-plugin/unit": "*"
+  },
+  "minimum-stability": "dev"
 }
