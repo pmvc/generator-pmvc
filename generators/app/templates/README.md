@@ -26,4 +26,5 @@
 
 #### 2.2 Or use composer command-line
    * php composer.phar require pmvc-plugin/<%= plugInName %>
-
+   * or
+      * composer require pmvc-plugin/<%= plugInName %>
