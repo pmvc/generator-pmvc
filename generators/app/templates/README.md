@@ -13,6 +13,8 @@
    * curl -sS https://getcomposer.org/installer | php
 
 ### 2. Install by composer.json or use command-line directly
+<details><summary>CLICK TO SEE</summary><p>
+
 #### 2.1 Install by composer.json
    * vim composer.json
 ```
@@ -26,5 +28,9 @@
 
 #### 2.2 Or use composer command-line
    * php composer.phar require pmvc-plugin/<%= plugInName %>
-   * or
-      * composer require pmvc-plugin/<%= plugInName %>
+
+   or
+   
+   * composer require pmvc-plugin/<%= plugInName %>
+
+</p></details>
