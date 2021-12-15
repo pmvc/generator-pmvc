@@ -8,16 +8,14 @@
     "type": "git",
     "url": "https://github.com/pmvc/generator-php-pmvc-plugin"
   },
-  "author": " (https://github.com/pmvc)",
+  "author": "Hill <hill@kimo.com>",
   "scripts": {
     "mochaFor": "mocha",
     "mocha": "npm run mochaFor -- 'generators/**/__tests__/*.js'",
     "test": "npm run mocha",
     "prepublishOnly": "npm run test"
   },
-  "keywords": [
-    "yeoman-generator"
-  ],
+  "keywords": ["yeoman-generator"],
   "dependencies": {
     "chalk": "^1.0.0",
     "yeoman-environment": "^3.6.0",
@@ -36,9 +34,7 @@
   "engines": {
     "node": ">=12"
   },
-  "files": [
-    "generators"
-  ],
+  "files": ["generators"],
   "directories": {
     "test": "test"
   }
