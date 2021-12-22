@@ -3665,17 +3665,17 @@ mkdirp-infer-owner@^2.0.0:
     infer-owner "^1.0.4"
     mkdirp "^1.0.3"
 
+mkdirp@1.0.4, mkdirp@^1.0.3, mkdirp@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
+  integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
+
 mkdirp@^0.5.1:
   version "0.5.5"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.5.tgz#d91cefd62d1436ca0f41620e251288d420099def"
   integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
   dependencies:
     minimist "^1.2.5"
-
-mkdirp@^1.0.3, mkdirp@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
-  integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
 
 mocha@^9.x:
   version "9.1.3"
@@ -4681,6 +4681,11 @@ reflect.ownkeys@^0.2.0:
   resolved "https://registry.yarnpkg.com/reflect.ownkeys/-/reflect.ownkeys-0.2.0.tgz#749aceec7f3fdf8b63f927a04809e90c5c0b3460"
   integrity sha1-dJrO7H8/34tj+SegSAnpDFwLNGA=
 
+regenerator-runtime@^0.13.4:
+  version "0.13.9"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
+  integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
+
 regexpp@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/regexpp/-/regexpp-2.0.1.tgz#8d19d31cf632482b589049f8281f93dbcba4d07f"
@@ -4776,6 +4781,19 @@ require-relative@^0.8.7:
   version "0.8.7"
   resolved "https://registry.yarnpkg.com/require-relative/-/require-relative-0.8.7.tgz#7999539fc9e047a37928fa196f8e1563dabd36de"
   integrity sha1-eZlTn8ngR6N5KPoZb44VY9q9Nt4=
+
+reshow-constant@*:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/reshow-constant/-/reshow-constant-0.1.2.tgz#7ca2aa1a37c08a7f860649c8f6ad3c3b68a322ee"
+  integrity sha512-cOBdsOS660MSeXbrJM+oUXnk9vNsam/NoHFJN6FB6/AI2Z73uZ2N3jsdSpJvlNpLmMBKHpq3ZG3388/b1z/VXg==
+
+reshow-runtime@*:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/reshow-runtime/-/reshow-runtime-0.3.2.tgz#c85826f79f35f5cdf8841d0a025e4a37c117c155"
+  integrity sha512-2aTPtLZztBPkXqV7JGa+KkS2/UpsUsb2ohGKjAbvrvokwlpHcPOXN0GLZmyDCRMma9dfYR9fqF1k53Ml6zBz/A==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+    reshow-constant "*"
 
 reshow-unit@*:
   version "0.0.5"
@@ -5971,7 +5989,7 @@ yeoman-assert@*:
   resolved "https://registry.yarnpkg.com/yeoman-assert/-/yeoman-assert-3.1.1.tgz#9f6fa0ecba7dd007c40f579668cb5dda18c79343"
   integrity sha512-bCuLb/j/WzpvrJZCTdJJLFzm7KK8IYQJ3+dF9dYtNs2CUYyezFJDuULiZ2neM4eqjf45GN1KH/MzCTT3i90wUQ==
 
-yeoman-environment@^3.6.0:
+yeoman-environment@^3.8.1:
   version "3.8.1"
   resolved "https://registry.yarnpkg.com/yeoman-environment/-/yeoman-environment-3.8.1.tgz#619e32ba63c9ec29bfaab8cfaa6306d58bf8d85b"
   integrity sha512-UM42p60GcJOwPfL63yBwBiiZiZ4p7taEjR5B+XdEu+sf73T+510gxiAqYuTCDOVTYBqhywVpZoWEnR+HtshiBA==
@@ -6040,6 +6058,21 @@ yeoman-test@*:
     mem-fs-editor "^9.0.0"
     sinon "^10.0.0"
     temp-dir "^2.0.0"
+
+yo-reshow@*:
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/yo-reshow/-/yo-reshow-0.0.13.tgz#00e17517bf7403d1190eb48dd3d9a784cc659fd8"
+  integrity sha512-qEmGON79xADojN3ExT2fXiTYN5XOYRwpyMN+vSSbCfD0Adp9cMboI/JTWX6q/sMch2pw9KnALd5RRGgDHiRFLg==
+  dependencies:
+    mkdirp "1.0.4"
+    reshow-constant "*"
+    reshow-runtime "*"
+    reshow-unit "*"
+    yeoman-assert "*"
+    yeoman-environment "^3.8.1"
+    yeoman-generator "^5.4.2"
+    yeoman-test "*"
+    yosay "^1.0.2"
 
 yocto-queue@^0.1.0:
   version "0.1.0"

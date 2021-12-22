@@ -18,11 +18,9 @@
   "keywords": [
     "yeoman-generator"
   ],
-  "dependencies": { },
+  "dependencies": {},
   "devDependencies": {
-    "reshow-unit": "*",
-    "yeoman-assert": "*",
-    "yeoman-test": "*"
+    "yo-reshow": "*"
   },
   "bugs": {
     "url": "https://github.com/pmvc/generator-pmvc/issues"
