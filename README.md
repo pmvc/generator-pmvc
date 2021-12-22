@@ -1,25 +1,28 @@
-[![CircleCI](https://circleci.com/gh/pmvc/generator-php-pmvc-plugin/tree/master.svg?style=svg)](https://circleci.com/gh/pmvc/generator-php-pmvc-plugin/tree/master)
+[![CircleCI](https://circleci.com/gh/pmvc/generator-pmvc/tree/master.svg?style=svg)](https://circleci.com/gh/pmvc/generator-pmvc/tree/master)
+
+generator-pmvc
+===
 
 ## Required node12
 https://formulae.brew.sh/formula/node@12
 
-## generator-php-pmvc-plugin getting Started
+## generator-pmvc getting Started
 
    * npm 
-      * https://www.npmjs.com/package/generator-php-pmvc-plugin
+      * https://www.npmjs.com/package/generator-pmvc
 
 ### Getting Started
 
-To install generator-php-pmvc-plugin from npm, run:
+To install generator-pmvc from npm, run:
 
 ```bash
-sudo npm install -g generator-php-pmvc-plugin
+sudo npm install -g generator-pmvc
 ```
 
 Finally, initiate the generator:
 
 ```bash
-yo php-pmvc-plugin
+npx yo pmvc
 ```
 
 ### What is Yeoman?
