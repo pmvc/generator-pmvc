@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/pmvc/generator-pmvc/tree/master.svg?style=svg)](https://circleci.com/gh/pmvc/generator-pmvc/tree/master)
+[![CircleCI](https://circleci.com/gh/pmvc/generator-pmvc/tree/main.svg?style=svg)](https://circleci.com/gh/pmvc/generator-pmvc/tree/main)
 
 generator-pmvc
 ===
@@ -37,4 +37,4 @@ sudo npm install -g yo
 
 ## License
 
-MIT @2021
+ISC @2022

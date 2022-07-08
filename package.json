@@ -1,30 +1,32 @@
 {
+  "version": "0.4.0",
   "name": "generator-pmvc",
-  "version": "0.3.13",
-  "description": "Yeoman generator for PMVC Plugin",
-  "license": "MIT",
-  "main": "",
   "repository": {
     "type": "git",
     "url": "https://github.com/pmvc/generator-pmvc"
   },
+  "homepage": "https://github.com/pmvc/generator-pmvc",
+  "description": "Yeoman generator for PMVC Plugin",
   "author": "Hill <hill@kimo.com>",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "yo-reshow": "*"
+  },
+  "devDependencies": {
+    "yo-unit": "*"
+  },
   "scripts": {
     "mochaFor": "mocha",
     "mocha": "npm run mochaFor -- 'generators/**/__tests__/*.js'",
     "test": "npm run mocha",
     "prepublishOnly": "npm run test"
   },
-  "keywords": [
-    "yeoman-generator"
-  ],
-  "dependencies": {
-    "yo-reshow": "*"
-  },
   "bugs": {
     "url": "https://github.com/pmvc/generator-pmvc/issues"
   },
-  "homepage": "https://github.com/pmvc/generator-pmvc",
   "engines": {
     "node": ">=12"
   },

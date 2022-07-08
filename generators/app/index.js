@@ -1,10 +1,6 @@
-const yeoman = require("yeoman-generator");
-const Generator = require("yeoman-generator");
-const chalk = require("chalk");
-const yosay = require("yosay");
-const mkdirp = require("mkdirp");
+const { YoGenerator, YoHelper, commonPrompt } = require("yo-reshow");
 
-module.exports = class extends Generator {
+module.exports = class extends YoGenerator {
   // note: arguments and options should be defined in the constructor.
   constructor(args, opts) {
     super(args, opts);
@@ -37,16 +33,15 @@ module.exports = class extends Generator {
    * https://github.com/SBoudrias/Inquirer.js
    */
   async prompting() {
+    const { say } = YoHelper(this);
     // https://github.com/yeoman/environment/blob/main/lib/util/log.js
-    this.log(
-      yosay(
-        'Before "PMVC Plugin"\n\n!! Need Create Folder First !!\n\nYou need create folder by yourself.',
-        { maxLength: 30 }
-      )
+    say(
+      'Before "PMVC Plugin"\n\n!! Need Create Folder First !!\n\nYou need create folder by yourself.'
     );
 
     const folders = this.destinationRoot().split("/");
     const folderName = folders[folders.length - 1];
+
     const prompts = [
       {
         type: "confirm",
@@ -90,52 +85,38 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    const copy = (src, dest, options) => {
-      const action = options ? this.fs.copyTpl : this.fs.copy;
-      try {
-        action.call(
-          this.fs,
-          this.templatePath(src),
-          this.destinationPath(dest),
-          options
-        );
-      } catch (e) {
-        console.log(e);
-      }
-    };
+    const { cp, mkdir } = YoHelper(this);
 
-    mkdirp(this.destinationPath("tests"));
-    mkdirp(this.destinationPath("src"));
-    mkdirp(this.destinationPath(".circleci"));
+    mkdir("tests");
+    mkdir("src");
+    mkdir(".circleci");
+    cp("phpunit.xml");
+    cp("_gitignore", ".gitignore");
+    cp("tests/include.php", "tests/include.php");
 
-    copy("phpunit.xml", "phpunit.xml");
-    copy("_gitignore", ".gitignore");
-    copy("tests/include.php", "tests/include.php");
-
-    copy("_circleci/config.yml", ".circleci/config.yml", {
+    cp("_circleci/config.yml", ".circleci/config.yml", {
       plugInName: this.plugInName,
     });
 
-    copy("composer.json", "composer.json", {
+    cp("composer.json", "composer.json", {
       plugInName: this.plugInName,
       description: this.description,
       keyword: this.keyword,
     });
 
-    copy("hello_world.php", this.plugInName + ".php", {
+    cp("hello_world.php", this.plugInName + ".php", {
       plugInName: this.plugInName,
       _INIT_CONFIG: "${_INIT_CONFIG}",
     });
 
-    copy("README.md", "README.md", {
+    cp("README.md", "README.md", {
       plugInName: this.plugInName,
     });
 
-    copy("tests/test.php", "tests/test.php", {
+    cp("tests/test.php", "tests/test.php", {
       plugInName: this.plugInName,
       PlugInName:
         this.plugInName.charAt(0).toUpperCase() + this.plugInName.slice(1),
     });
   }
-
 };

@@ -2,42 +2,49 @@
  * https://yeoman.io/authoring/testing.html
  * https://gilsondev.gitbooks.io/yeoman-authoring/content/authoring/unit_testing.html
  */
-const path = require("path");
-const helpers = require("yeoman-test");
-const assert = require("yeoman-assert");
-const os = require("os");
-const fs = require("fs");
+const { YoTest, assert } = require("yo-unit");
 
 describe("php-pmvc-plugin:app", () => {
-  before((done) => {
-    helpers
-      .run(path.join(__dirname, "../."))
-      .inTmpDir(dir=>{console.log('Test folder: '+ dir)})
-      .withPrompts({
+  let runResult;
+
+  before(async () => {
+    runResult = await YoTest({
+      source: __dirname + "/../.",
+      params: {
         isReady: true,
         plugInName: "foo",
         description: "foo-desc",
         keyword: "foo-keyword",
-      })
-      .on("end", () => {
-        done();
-      });
+      },
+    });
+  });
+
+  after(()=>{
+    if (runResult) {
+      runResult.restore();
+    }
   });
 
   it("should have folder", () => {
-    assert.file(['tests', 'src', '.circleci']);
+    assert.file(["tests", "src", ".circleci"]);
   });
 
   it("should have file", () => {
-    assert.file(['phpunit.xml', '.gitignore', 'tests/include.php']);
+    assert.file(["phpunit.xml", ".gitignore", "tests/include.php"]);
   });
 
   it("should have tpl", () => {
-    assert.file(['composer.json', 'foo.php', 'README.md', 'tests/test.php', '.circleci/config.yml']);
+    assert.file([
+      "composer.json",
+      "foo.php",
+      "README.md",
+      "tests/test.php",
+      ".circleci/config.yml",
+    ]);
   });
 
   it("should have content", () => {
-    assert.fileContent('composer.json', 'foo-desc');
-    assert.fileContent('.circleci/config.yml', 'foo');
+    assert.fileContent("composer.json", "foo-desc");
+    assert.fileContent(".circleci/config.yml", "foo");
   });
 });
