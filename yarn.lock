@@ -1071,6 +1071,14 @@ caching-transform@^4.0.0:
     package-hash "^4.0.0"
     write-file-atomic "^3.0.0"
 
+call-func@*:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/call-func/-/call-func-0.3.3.tgz#7bea8156913b29a3ee144423abbdb3322a7ca296"
+  integrity sha512-n/mXeiXBmQ2PKK2os9F8Yf5D9bBhQrjVzbQihbodxAbq8SrpZm3O8W0SJiPOX0OSUZYUgwPrQiv5H5pl3o1ysg==
+  dependencies:
+    reshow-constant "*"
+    reshow-runtime "*"
+
 callsites@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
@@ -1096,9 +1104,9 @@ camelcase@^6.0.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001359:
-  version "1.0.30001363"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001363.tgz#26bec2d606924ba318235944e1193304ea7c4f15"
-  integrity sha512-HpQhpzTGGPVMnCjIomjt+jvyUu8vNFo3TaDiZ/RcoTrlOq/5+tC8zHdsbgFB6MxmaY+jCpsH09aD80Bb4Ow3Sg==
+  version "1.0.30001364"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001364.tgz#1e118f0e933ed2b79f8d461796b8ce45398014a0"
+  integrity sha512-9O0xzV3wVyX0SlegIQ6knz+okhBB5pE0PC40MNdwcipjwpxoUEHL24uJ+gG42cgklPjfO5ZjZPme9FTSN3QT2Q==
 
 chai@*:
   version "4.3.6"
@@ -1352,9 +1360,9 @@ convert-source-map@^1.7.0:
     safe-buffer "~5.1.1"
 
 core-js@^3.1.4:
-  version "3.23.3"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.23.3.tgz#3b977612b15da6da0c9cc4aec487e8d24f371112"
-  integrity sha512-oAKwkj9xcWNBAvGbT//WiCdOMpb9XQG92/Fe3ABFM/R16BsHgePG00mFOgKf7IsCtfj8tA1kHtf/VwErhriz5Q==
+  version "3.23.4"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.23.4.tgz#92d640faa7f48b90bbd5da239986602cfc402aa6"
+  integrity sha512-vjsKqRc1RyAJC3Ye2kYqgfdThb3zYnx9CrqoCcjMOENMtQPC7ZViBvlDxwYU/2z2NI/IPuiXw5mT4hWhddqjzQ==
 
 core-util-is@~1.0.0:
   version "1.0.3"
@@ -1548,9 +1556,9 @@ ejs@^3.1.6:
     jake "^10.8.5"
 
 electron-to-chromium@^1.4.172:
-  version "1.4.184"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.184.tgz#381d4d111fc82d3376ed690dfb621e675f9078a9"
-  integrity sha512-IADi390FRdvxWfVX3hjzfTDNVHiTqVo9ar53/7em/SfhUG9YcjVhyQecY/XwmBHRKden/wFud7RWOUH7+7LFng==
+  version "1.4.185"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.185.tgz#3432d7944f1c5fe20664bb45d9cced2151405ce2"
+  integrity sha512-9kV/isoOGpKkBt04yYNaSWIBn3187Q5VZRtoReq8oz5NY/A4XmU6cAoqgQlDp7kKJCZMRjWZ8nsQyxfpFHvfyw==
 
 emoji-regex@^7.0.1:
   version "7.0.3"
@@ -4972,10 +4980,11 @@ yeoman-test@*:
     temp-dir "^2.0.0"
 
 yo-reshow@*:
-  version "0.17.5"
-  resolved "https://registry.yarnpkg.com/yo-reshow/-/yo-reshow-0.17.5.tgz#6e5f1df5c7de912598245b2dc411c5765e589ffd"
-  integrity sha512-jSMv78pXqbhcl4crwRkryzWARBCupb81TFW3Z+SVctqGz23hUqYsajW/riWUobUkIu4ZcxsdN7tzWm839qZ+IQ==
+  version "0.17.10"
+  resolved "https://registry.yarnpkg.com/yo-reshow/-/yo-reshow-0.17.10.tgz#d098afaef344b5022a5ad632687f2494c136c94e"
+  integrity sha512-dAhD+wEHDZxsMSnxWYb3/XV6rTSK/aZEqRpB+EM0FaSKin3PX729/jDsCqtkj05bx+3aEO/jkl3SNcM7shAF6Q==
   dependencies:
+    call-func "*"
     mkdirp "1.0.4"
     object-nested "*"
     parse-ini-string "*"

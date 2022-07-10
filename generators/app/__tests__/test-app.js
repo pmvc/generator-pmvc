@@ -12,7 +12,7 @@ describe("php-pmvc-plugin:app", () => {
       source: __dirname + "/../.",
       params: {
         isReady: true,
-        plugInName: "foo",
+        mainName: "foo",
         description: "foo-desc",
         keyword: "foo-keyword",
       },

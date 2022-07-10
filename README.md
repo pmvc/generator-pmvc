@@ -22,17 +22,7 @@ sudo npm install -g generator-pmvc
 Finally, initiate the generator:
 
 ```bash
-npx yo pmvc
-```
-
-### What is Yeoman?
-
-Trick question. It's not a thing. It's this guy:
-
-https://yeoman.io/
-
-```bash
-sudo npm install -g yo
+yonpx pmvc [plugin-name]
 ```
 
 ## License
